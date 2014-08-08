@@ -1,12 +1,16 @@
 #!/usr/bin/env ruby
 
 require_relative 'lib/environment'
+require_relative 'lib/router'
 Environment.environment = ENV["DB"] || "development"
 
 def clean_gets
   (gets || "").chomp
 end
 
+# puts IO.readlines('football.txt')
 
 
-puts IO.readlines('football.txt')
+leagues_controller = LeaguesController.new()
+leagues_controller.list
+leagues_controller.ask_for_commissioner_team(ARGV)
