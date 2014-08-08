@@ -1,1 +1,12 @@
 #!/usr/bin/env ruby
+
+require_relative 'lib/environment'
+Environment.environment = ENV["DB"] || "development"
+
+def clean_gets
+  (gets || "").chomp
+end
+
+
+
+puts IO.readlines('football.txt')

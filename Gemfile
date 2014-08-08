@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.1'
-#ruby-gemset=zss
+#ruby-gemset=fdd
 
 gem 'activerecord', require: 'active_record'
 gem 'rake'
