@@ -5,7 +5,7 @@ require_relative 'lib/router'
 Environment.environment = ENV["DB"] || "development"
 
 def clean_gets
-  (gets || "").chomp
+  ($stdin.gets || "").chomp
 end
 
 # puts IO.readlines('football.txt')

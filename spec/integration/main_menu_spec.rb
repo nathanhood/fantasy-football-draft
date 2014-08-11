@@ -15,6 +15,17 @@ FANTASY FOOTBALL DRAFT
       expected = "Welcome Ballers League!\nEnter the commissioner's team name"
       expect(actual).to include(expected)
     end
+  end
 
+  context "Invalid content" do
+    it "should print an error message and exit application" do
+      actual = `./ffd`
+      expected = "cannot be blank.\nMust enter a league name when program is executed.\nPlease try again."
+      expect(actual).to include(expected)
+    end
+
+    it "should not create a league" do
+      expect(League.count).to eq 0
+    end
   end
 end
