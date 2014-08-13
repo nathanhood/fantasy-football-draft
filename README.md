@@ -1,7 +1,10 @@
 Fantasy Football Draft
 ======================
 
-This application simulates a fantasy football draft
+This application simulates a simplified fantasy football draft. It is an application
+made to run inside of a command line terminal. This is a class project
+from the Nashville Software School, introducing us to Active Record as well
+as the general file structures of Rails.
 
 ## Installation Instructions
 
@@ -13,13 +16,14 @@ This application simulates a fantasy football draft
 
 Run:
 
-    ./ffd
+    ./ffd [League Name]
 
 Follow the on-screen prompts to create a league and start a draft.
 
 ## Technologies / Dependencies
 
   * Ruby 2.1.1
+  * Active Record
 
 ## Contributors
 
