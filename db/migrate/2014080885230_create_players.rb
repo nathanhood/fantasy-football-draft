@@ -1,11 +1,13 @@
-class CreateLeagues < ActiveRecord::Migration
+class CreatePlayers < ActiveRecord::Migration
   def change
     # In our original implementation:
     # CREATE TABLE IF NOT EXISTS skills(id INTEGER PRIMARY KEY AUTOINCREMENT, training_path_id INTEGER, name VARCHAR(29))
-    create_table :leagues do |t|
+    create_table :players do |t|
       t.string :name
-      t.integer :draft_round, default: 0
-      t.integer :round_position, default: -1
+      t.string :position
+      t.string :nfl_team
+      t.integer :rank
+      t.references :team, default: nil
     end
   end
 end
